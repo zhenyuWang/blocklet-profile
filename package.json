@@ -24,7 +24,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm exec lint-staged",
+      "pre-commit": "npm exec lint-staged && npm run test:unit",
       "commit-msg": "node scripts/verifyCommit.js"
     }
   },
