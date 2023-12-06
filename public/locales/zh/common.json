@@ -3,5 +3,16 @@
   "en": "英语",
   "zh": "中文简体",
   "profile-index-title": "个人信息",
-  "profile-edit-title": "编辑个人信息"
+  "hi": "你好",
+  "welcome-back": "欢迎回来",
+  "avatar": "头像",
+  "email-label": "邮箱:",
+  "phone-label": "手机:",
+  "gender-label": "性别:",
+  "birth-date-label": "出生日期:",
+  "edit": "编辑",
+  "profile-edit-title": "编辑个人信息",
+  "female": "女",
+  "male": "男",
+  "other": "其他"
 }
