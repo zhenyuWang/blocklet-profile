@@ -50,7 +50,7 @@ export default function ProfileIndex() {
     <main>
       <Zoom in={true} mountOnEnter unmountOnExit>
         <div className='w-full h-screen flex flex-col items-center sm:justify-center text-white'>
-          <h1 className='text-3xl font-bold mt-14 sm:-mt-20 mb-6'>{t('profile-index-title')}</h1>
+          <h1 className='text-3xl font-bold mt-14 sm:-mt-20 mb-14'>{t('profile-index-title')}</h1>
           <Avatar alt={t('avatar')} src={userInfo.avatar} sx={{ width: 100, height: 100 }} />
           <div className='mt-6 mb-4 text-center'>
             <p>
