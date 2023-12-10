@@ -41,29 +41,29 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.custom-input .MuiInputLabel-root,
-.custom-input .MuiInputBase-input,
-.custom-input .MuiFormLabel-root,
-.custom-input .MuiInputBase-root,
-.custom-input .MuiInput-underline:after,
-.custom-input .MuiInput-underline:before,
-.custom-input svg {
+.dark .custom-input .MuiInputLabel-root,
+.dark .custom-input .MuiInputBase-input,
+.dark .custom-input .MuiFormLabel-root,
+.dark .custom-input .MuiInputBase-root,
+.dark .custom-input .MuiInput-underline:after,
+.dark .custom-input .MuiInput-underline:before,
+.dark .custom-input svg {
   color: #fff;
 }
 
-.custom-input .MuiFormHelperText-root {
+.dark .custom-input .MuiFormHelperText-root {
   color: #dddada;
 }
 
-.custom-input .MuiInputBase-root::before,
-.custom-input fieldset {
+.dark .custom-input .MuiInputBase-root::before,
+.dark .custom-input fieldset {
   border-color: #fff;
 }
 
-.custom-input .MuiInputBase-root:hover::before,
-.custom-input:hover fieldset {
+.dark .custom-input .MuiInputBase-root:hover::before,
+.dark .custom-input:hover fieldset {
   border-color: #1976d2 !important;
 }
-.custom-input:hover .MuiInputLabel-root {
+.dark .custom-input:hover .MuiInputLabel-root {
   color: #1976d2;
 }

@@ -28,7 +28,7 @@ export default function SendVerificationCodeButton() {
 
   return (
     <button
-      className='focus:outline-none w-[90px] text-white'
+      className='focus:outline-none w-[90px] dark:text-white'
       type='button'
       disabled={sendVerificationCodeButtonText !== defaultSendCodeText}
       onClick={sendVerificationCode}>

@@ -10,7 +10,7 @@ export default function UserInfoListItem({
   value: string
 }) {
   return (
-    <li className='h-16 flex flex-col items-center sm:flex-row border-b hover:border-b-sky-500'>
+    <li className='h-16 flex flex-col items-center sm:flex-row border-b border-b-gray-400 hover:border-b-black dark:hover:border-b-white'>
       <div className='flex mt-1 mb-2 sm:mb-0 sm:mt-0'>
         {icon}
         <div className='pl-2 w-[86px] mr-1'>{label}</div>

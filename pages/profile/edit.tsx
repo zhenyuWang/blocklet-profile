@@ -38,9 +38,12 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import Confetti from 'react-dom-confetti'
+import { useTheme } from '@/context/theme-context'
 
 export default function ProfileEdit() {
   const { t } = useTranslation('common')
+  const themeContext = useTheme()
+  const theme = themeContext?.theme
   const [userInfo, setUserInfo] = useLocalStorage('userInfo', JSON.stringify(initUserInfo))
   const [isOpenDialog, setIsOpenDialog] = useState(false)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
@@ -98,8 +101,8 @@ export default function ProfileEdit() {
 
   return (
     <Slide direction='down' in={true} mountOnEnter unmountOnExit>
-      <div className='w-100 h-screen flex flex-col items-center sm:justify-center text-white'>
-        <h1 className='text-3xl font-bold mt-14 sm:-mt-20 mb-14'>{t('profile-edit-title')}</h1>
+      <div className='w-100 min-h-screen flex flex-col items-center sm:justify-center dark:text-white'>
+        <h1 className='text-3xl font-bold mt-14 mb-14'>{t('profile-edit-title')}</h1>
 
         <form className='flex flex-col w-80' onSubmit={handleSubmit(onSubmit)}>
           <div className='mb-2 w-28 h-28 relative mx-auto'>
@@ -234,7 +237,7 @@ export default function ProfileEdit() {
             errors={errors.password}
           />
 
-          <div className='py-2 pl-3 flex flex-row items-center border rounded border-white hover:border-[#1976d2]'>
+          <div className='py-2 pl-3 flex flex-row items-center border rounded border-black/[0.3]  dark:border-white hover:border-black dark:hover:border-[#1976d2]'>
             {userInfo.gender === 0 ? (
               <FemaleIcon style={{ fontSize: 26 }} />
             ) : userInfo.gender === 1 ? (
@@ -258,17 +261,23 @@ export default function ProfileEdit() {
                   }}>
                   <FormControlLabel
                     value={0}
-                    control={<Radio style={{ color: '#fff' }} size='small' />}
+                    control={
+                      <Radio style={{ color: theme === 'light' ? '#000' : '#fff' }} size='small' />
+                    }
                     label='Female'
                   />
                   <FormControlLabel
                     value={1}
-                    control={<Radio style={{ color: '#fff' }} size='small' />}
+                    control={
+                      <Radio style={{ color: theme === 'light' ? '#000' : '#fff' }} size='small' />
+                    }
                     label='Male'
                   />
                   <FormControlLabel
                     value={2}
-                    control={<Radio style={{ color: '#fff' }} size='small' />}
+                    control={
+                      <Radio style={{ color: theme === 'light' ? '#000' : '#fff' }} size='small' />
+                    }
                     label='Other'
                   />
                 </RadioGroup>
