@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const { i18n } = require('./next-i18next.config')
 
-module.exports = {}
-
 const whenDev = process.env.NODE_ENV === 'development'
 
 const getDevNextConfig = () => {
